@@ -4,7 +4,7 @@ var i = 1;
 
 function setup() {
   createCanvas(400, 400);
-  background(255, 0, 0);
+  background(100, 255, 255);
   mic = new p5.AudioIn();
   mic.start();
 
@@ -13,9 +13,9 @@ function setup() {
 function draw() {
   var vol = mic.getLevel();
   
-  stroke('magenta');
+  stroke('red');
   strokeWeight(vol*50);
-  fill(255,255,0);
+  fill(100,0,0);
   var size = map(vol, 0, 0.5, 10, 500);
   
   console.log(size);
